@@ -187,7 +187,7 @@
 (defun handle-new-place (edge pos charging)
   (let* ((node (assoc pos *congestion-city-nodes*))
 		 (has-worm (and (member 'glow-worm node)
-						(not (member pos *visited nodes*)))))
+						(not (member pos *visited-nodes*)))))
 	(pushnew pos *visited-nodes*)
 	(setf *player-pos* pos)
 	(draw-known-city)
